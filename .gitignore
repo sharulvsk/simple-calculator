@@ -1,32 +1,24 @@
-# Prerequisites
-*.d
+#include <iostream>
+#include "calculator.h"
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main() {
+    Calculator calculator;
 
-# Precompiled Headers
-*.gch
-*.pch
+    double num1, num2;
+    char operation;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    std::cout << "Enter first number: ";
+    std::cin >> num1;
 
-# Fortran module files
-*.mod
-*.smod
+    std::cout << "Enter an operation (+, -, *, /): ";
+    std::cin >> operation;
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+    std::cout << "Enter second number: ";
+    std::cin >> num2;
 
-# Executables
-*.exe
-*.out
-*.app
+    double result = calculator.calculate(num1, num2, operation);
+
+    std::cout << "Result: " << result << std::endl;
+
+    return 0;
+}
